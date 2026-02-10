@@ -56,7 +56,7 @@ export default function Signup() {
     };
 
     return (
-        <section className="login">
+        <section className="login signup">
             <div className="form-container">
                 <div className="text-section">
                     <h2>Create your account</h2>
