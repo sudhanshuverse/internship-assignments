@@ -77,7 +77,7 @@ export default function Signup() {
                     <div className="password-wrapper">
                         <input type={showPassword ? "text" : "password"} placeholder="••••••••••" value={formData.password} onChange={(e) => setFormData({ ...formData, password: e.target.value })} />
                         <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>
-                            {showPassword ? <FaEyeSlash /> : <FaEye />}
+                            {showPassword ? <FaEye /> : <FaEyeSlash />}
                         </span>
                     </div>
                     {errors.password && (
@@ -88,7 +88,7 @@ export default function Signup() {
                     <div className="password-wrapper">
                         <input type={showConfirmPassword ? "text" : "password"} placeholder="••••••••••" value={formData.confirmPassword} onChange={(e) => setFormData({ ...formData, confirmPassword: e.target.value, })} />
                         <span className="eye-icon" onClick={() => setShowConfirmPassword(!showConfirmPassword)}>
-                            {showConfirmPassword ? <FaEyeSlash /> : <FaEye />}
+                            {showConfirmPassword ? <FaEye /> : <FaEyeSlash />}
                         </span>
                     </div>
                     {errors.confirmPassword && (

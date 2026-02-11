@@ -53,7 +53,7 @@ export default function Login() {
                     <p className="password-para">Password</p>
                     <div className="password-wrapper">
                         <input type={showPassword ? "text" : "password"} placeholder="••••••••••" value={password} onChange={(e) => setPassword(e.target.value)} />
-                        <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEyeSlash /> : <FaEye />}</span>
+                        <span className="eye-icon" onClick={() => setShowPassword(!showPassword)}>{showPassword ? <FaEye /> : <FaEyeSlash />}</span>
                     </div>
 
                     {errors.password && (
