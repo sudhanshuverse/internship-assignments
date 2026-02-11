@@ -3,6 +3,11 @@ import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.css";
 
+const staticUser = {
+    email: "test@gmail.com",
+};
+
+
 export default function Signup() {
     const [formData, setFormData] = useState({
         name: "",
@@ -50,11 +55,18 @@ export default function Signup() {
         if (!validate()) return;
 
         setLoading(true);
+
         setTimeout(() => {
             setLoading(false);
-            alert("Signup successful!");
-        }, 1500);
+
+            if (formData.email === staticUser.email) {
+                alert("User already exists");
+            } else {
+                alert("Signup successful");
+            }
+        }, 1000);
     };
+
 
     return (
         <section className="login signup">

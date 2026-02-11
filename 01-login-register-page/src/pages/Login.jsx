@@ -3,6 +3,12 @@ import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.css";
 
+const staticUser = {
+    email: "test@gmail.com",
+    password: "123456",
+};
+
+
 export default function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -32,11 +38,18 @@ export default function Login() {
         if (!validate()) return;
 
         setLoading(true);
+
         setTimeout(() => {
             setLoading(false);
-            alert("Login successful");
-        }, 1500);
+
+            if (email === staticUser.email && password === staticUser.password) {
+                alert("Login successfully");
+            } else {
+                alert("Invalid email or password");
+            }
+        }, 1000);
     };
+
 
     return (
         <section className="login">
