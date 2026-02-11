@@ -63,7 +63,7 @@ export default function Login() {
                     <button type="submit" disabled={loading}>{loading ? "Logging in..." : "Submit"}</button>
                 </form>
 
-                <p className="sign-up-section">Don't have an account? <a href="/signup">Sign up</a></p>
+                <p className="sign-up-section">Don't have an account?  <Link to="/signup">Sign up</Link></p>
             </div>
         </section>
     );

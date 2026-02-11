@@ -100,7 +100,7 @@ export default function Signup() {
                 </form>
 
                 <p className="sign-up-section">
-                    Already have an account? <a href="/">Login</a>
+                    Already have an account? <Link to="/">Login</Link>
                 </p>
             </div>
         </section>
