@@ -1,15 +1,19 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import "./Login.css";
 
 const staticUser = {
+    name: "Sudhanshu",
     email: "test@gmail.com",
     password: "123456",
 };
 
 
+
 export default function Login() {
+    const navigate = useNavigate();
+
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [errors, setErrors] = useState({});
@@ -43,17 +47,20 @@ export default function Login() {
             setLoading(false);
 
             if (email === staticUser.email && password === staticUser.password) {
-                alert("Login successfully");
+                navigate("/dashboard", {
+                    state: { name: staticUser.name }
+                });
             } else {
                 alert("Invalid email or password");
             }
+
         }, 1000);
     };
 
 
     return (
         <section className="login">
-            
+
             <div className="form-container">
                 <div className="text-section">
                     <h2>Log in to your account</h2>
