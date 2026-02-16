@@ -53,6 +53,7 @@ export default function Login() {
 
     return (
         <section className="login">
+            
             <div className="form-container">
                 <div className="text-section">
                     <h2>Log in to your account</h2>

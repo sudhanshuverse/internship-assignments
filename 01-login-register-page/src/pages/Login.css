@@ -123,3 +123,7 @@
 .eye-icon:hover {
     color: var(--primary-color);
 }
+
+.forgot-link:hover, .sign-up-section a:hover{
+    text-decoration: underline;
+}
