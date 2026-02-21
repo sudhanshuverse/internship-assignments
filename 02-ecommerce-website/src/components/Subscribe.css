@@ -1,0 +1,60 @@
+/* SUBSCRIBE SECTION */
+.subscribe-section {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 5rem 0;
+}
+
+.subscribe-section-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.subscribe-section-container h1 {
+    font-size: clamp(1.5rem, 6vw, 2.2rem);
+    color: var(--third-color);
+}
+
+.subscribe-section-container p {
+    color: var(--secondary-color);
+}
+
+
+.subscribe-section-input {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.subscribe-section-input input {
+    border: none;
+    border: 1px solid #C7C7C7;
+    width: clamp(50px, 50vw, 400px);
+    height: 50px;
+    font-size: 1rem;
+    padding: 1rem 0.7rem;
+    font-family: inherit;
+    border-right: none;
+}
+
+.subscribe-section-input input:focus {
+    outline: none;
+}
+
+.subscribe-section-input button {
+    border: none;
+    width: clamp(20px, 40vw, 150px);
+    height: 50px;
+    background-color: black;
+    color: white;
+    font-family: inherit;
+    text-transform: uppercase;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+}
