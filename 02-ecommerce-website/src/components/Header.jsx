@@ -23,16 +23,16 @@ const Header = () => {
         </div>
       </nav>
       <div className="nav-right">
-        <Link to="/search" className="nav-right-first">
+        <Link to="/" className="nav-right-first">
           <img src={searchIcon} alt="search icon" />
         </Link>
-        <Link to="/profile" className="nav-right-second">
+        <Link to="/" className="nav-right-second">
           <img src={profileIcon} alt="profile icon" />
         </Link>
-        <Link to="/card" className="nav-right-third">
+        <Link to="/" className="nav-right-third">
           <img src={storeIcon} alt="store icon" />
         </Link>
-        <Link to="/card" className="hamburger nav-right-fourth">
+        <Link to="/" className="hamburger nav-right-fourth">
           <img src={menuIcon} alt="menu icon" />
         </Link>
       </div>
