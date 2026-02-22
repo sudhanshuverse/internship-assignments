@@ -15,10 +15,10 @@ const Footer = () => {
         <div className="footer-second-section">
           <h1>Company</h1>
           <div className="footer-links">
-            <Link to="/abc">Home </Link>
-            <Link to="/abc">Collection </Link>
-            <Link to="/abc">About </Link>
-            <Link to="/abc">Contact </Link>
+            <Link to="/">Home </Link>
+            <Link to="/collection">Collection </Link>
+            <Link to="/about">About </Link>
+            <Link to="/contact">Contact </Link>
           </div>
         </div>
         <div className="footer-third-section">
