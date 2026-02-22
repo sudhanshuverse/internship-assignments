@@ -1,6 +1,8 @@
+import { Link } from "react-router";
+
 const BestSellerCard = ({ product }) => {
     return (
-        <a href={`/product/${product.id}`} className="product-link">
+        <Link href={`/product/${product.id}`} className="product-link">
             <div className="items-card">
                 <div className="card-image-container">
                     <img src={product.image} alt={product.name} />
@@ -8,7 +10,7 @@ const BestSellerCard = ({ product }) => {
                 <p className="card-title">{product.name}</p>
                 <strong className="card-price">${product.price}</strong>
             </div>
-        </a>
+        </Link>
     );
 };
 
