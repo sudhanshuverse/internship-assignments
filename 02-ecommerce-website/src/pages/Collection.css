@@ -1,28 +1,24 @@
+/* PAGE */
 .collection-main {
     padding: 2rem 1rem 4rem;
 }
 
-/* MAIN GRID LAYOUT */
+/* LAYOUT */
 .collection-layout {
     display: grid;
     grid-template-columns: 260px 1fr;
-    column-gap: 2.5rem;
-    row-gap: 1.2rem;
+    gap: 2rem;
     align-items: start;
 }
 
-/* FILTER SIDEBAR */
+/* SIDEBAR */
 .collection-filters {
-    grid-column: 1;
-    grid-row: 1 / span 2;
-}
-
-/* FILTER BOX */
-.filter-box {
     border: 1px solid var(--border-color);
     padding: 1.2rem;
+    height: fit-content;
 }
 
+/* FILTERS */
 .filter-main-title {
     font-size: 1rem;
     margin-bottom: 1rem;
@@ -49,15 +45,16 @@
     margin-right: 8px;
 }
 
-/* TOP BAR */
+/* TOPBAR */
 .collection-topbar {
-    grid-column: 2;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+    gap: 1rem;
 }
 
-/* HEADING */
 .collection-heading {
     display: flex;
     align-items: center;
@@ -71,49 +68,60 @@
     color: black;
 }
 
-.collection-line {
-    width: 45px;
-    height: 14px;
-}
-
 .collection-line img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 45px;
 }
 
-/* SORT DROPDOWN */
+/* SORT */
 .collection-sort select {
-    padding: .4rem .7rem;
+    padding: .45rem .8rem;
     border: 1px solid var(--border-color);
     background: white;
 }
 
 /* PRODUCTS */
-.collection-products {
-    grid-column: 2;
-}
-
 .products-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap: 1.5rem;
 }
 
-/* MOBILE */
-@media(max-width:900px) {
+/* ================== TABLET ================== */
+@media (max-width: 1024px) {
+
+    .collection-layout {
+        grid-template-columns: 200px 1fr;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ================== SMALL TABLET ================== */
+@media (max-width: 900px) {
 
     .collection-layout {
         grid-template-columns: 1fr;
     }
 
     .collection-filters {
-        grid-row: auto;
+        order: -1;          /* filters move to top */
     }
 
-    .collection-topbar {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 1rem;
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ================== MOBILE ================== */
+@media (max-width: 500px) {
+
+    .collection-heading {
+        font-size: 1.2rem;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
     }
 }
