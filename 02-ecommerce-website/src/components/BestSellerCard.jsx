@@ -1,8 +1,8 @@
-import { Link } from "react-router";
+import { Link } from "react-router-dom";
 
 const BestSellerCard = ({ product }) => {
     return (
-        <Link href={`/product/${product.id}`} className="product-link">
+        <Link to={`/product/${product.id}`} className="product-link">
             <div className="items-card">
                 <div className="card-image-container">
                     <img src={product.image} alt={product.name} />
